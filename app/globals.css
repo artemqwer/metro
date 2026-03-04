@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /* ─── Reset ──────────────────────────────────────────── */
 * {
   box-sizing: border-box;
@@ -20,26 +19,31 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #100C06;
+  background: #100c06;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5A3010;
+  background: #5a3010;
   border-radius: 2px;
 }
 
 /* ─── Image placeholder ──────────────────────────────── */
 .img-placeholder {
-  background:
-    repeating-linear-gradient(45deg, #1A1408 0px, #1A1408 10px, #130F06 10px, #130F06 20px);
-  border: 1px dashed #4A3018;
+  background: repeating-linear-gradient(
+    45deg,
+    #1a1408 0px,
+    #1a1408 10px,
+    #130f06 10px,
+    #130f06 20px
+  );
+  border: 1px dashed #4a3018;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 6px;
-  color: #5A4028;
-  font-family: 'Oswald', sans-serif;
+  color: #5a4028;
+  font-family: "Oswald", sans-serif;
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -63,12 +67,12 @@ body {
 /* ─── Metal panel ────────────────────────────────────── */
 .metal-panel {
   background: linear-gradient(180deg, #242018 0%, #161208 100%);
-  border: 1px solid #5A3818;
+  border: 1px solid #5a3818;
   position: relative;
 }
 
 .metal-panel::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
@@ -79,28 +83,42 @@ body {
 
 /* ─── Rivets ─────────────────────────────────────────── */
 .riveted::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: radial-gradient(circle at 38% 35%, #5A4838 0%, #2A1E14 60%, #1A1008 100%);
-  border: 1px solid #4A3828;
-  box-shadow: inset 0 1px 1px rgba(255, 200, 120, 0.12), 0 1px 2px rgba(0, 0, 0, 0.9);
+  background: radial-gradient(
+    circle at 38% 35%,
+    #5a4838 0%,
+    #2a1e14 60%,
+    #1a1008 100%
+  );
+  border: 1px solid #4a3828;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 200, 120, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.9);
   top: 5px;
   right: 5px;
   z-index: 2;
 }
 
 .riveted-tl::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: radial-gradient(circle at 38% 35%, #5A4838 0%, #2A1E14 60%, #1A1008 100%);
-  border: 1px solid #4A3828;
-  box-shadow: inset 0 1px 1px rgba(255, 200, 120, 0.12), 0 1px 2px rgba(0, 0, 0, 0.9);
+  background: radial-gradient(
+    circle at 38% 35%,
+    #5a4838 0%,
+    #2a1e14 60%,
+    #1a1008 100%
+  );
+  border: 1px solid #4a3828;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 200, 120, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.9);
   top: 5px;
   left: 5px;
   z-index: 2;
@@ -108,26 +126,31 @@ body {
 
 /* ─── Amber button ───────────────────────────────────── */
 .btn-amber {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #0A0600;
-  background: linear-gradient(180deg, #DFA020 0%, #A86010 45%, #CC8018 100%);
-  border: 1px solid #F0A828;
+  color: #0a0600;
+  background: linear-gradient(180deg, #dfa020 0%, #a86010 45%, #cc8018 100%);
+  border: 1px solid #f0a828;
   padding: 7px 22px;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
   transition: all 0.2s;
   clip-path: polygon(3px 0%, 100% 0%, calc(100% - 3px) 100%, 0% 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 220, 100, 0.3), 0 2px 8px rgba(0, 0, 0, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 220, 100, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .btn-amber:hover {
-  background: linear-gradient(180deg, #F0B030 0%, #C07818 45%, #E09820 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 240, 120, 0.5), 0 0 14px rgba(212, 140, 10, 0.5), 0 2px 8px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(180deg, #f0b030 0%, #c07818 45%, #e09820 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 240, 120, 0.5),
+    0 0 14px rgba(212, 140, 10, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.8);
   transform: translateY(-1px);
 }
 
@@ -137,11 +160,11 @@ body {
 
 /* ─── Nav link ───────────────────────────────────────── */
 .nav-link {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   letter-spacing: 0.14em;
   font-size: 12px;
-  color: #9A8870;
+  color: #9a8870;
   text-decoration: none;
   padding: 5px 4px;
   position: relative;
@@ -154,22 +177,22 @@ body {
 }
 
 .nav-link:hover {
-  color: #C8A850;
+  color: #c8a850;
 }
 
 .nav-link.active {
-  color: #D4870A;
-  border-bottom-color: #D4870A;
+  color: #d4870a;
+  border-bottom-color: #d4870a;
 }
 
 /* ─── Section heading ────────────────────────────────── */
 .section-heading {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 600;
   letter-spacing: 0.14em;
   font-size: 10px;
   text-transform: uppercase;
-  color: #8A7A60;
+  color: #8a7a60;
   display: flex;
   align-items: center;
   gap: 0;
@@ -178,14 +201,14 @@ body {
 
 .section-heading::before,
 .section-heading::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #4A3020 80%);
+  background: linear-gradient(90deg, transparent, #4a3020 80%);
 }
 
 .section-heading::after {
-  background: linear-gradient(270deg, transparent, #4A3020 80%);
+  background: linear-gradient(270deg, transparent, #4a3020 80%);
 }
 
 .section-heading span {
@@ -198,32 +221,35 @@ body {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #2E1E10;
-  border: 1px solid #5A3820;
+  background: #2e1e10;
+  border: 1px solid #5a3820;
   cursor: pointer;
   transition: all 0.3s;
   padding: 0;
 }
 
 .slider-dot.active {
-  background: #C87010;
-  border-color: #F0A030;
+  background: #c87010;
+  border-color: #f0a030;
   box-shadow: 0 0 8px rgba(200, 112, 16, 0.6);
 }
 
 /* ─── Card hover ─────────────────────────────────────── */
 .metro-card {
-  transition: border-color 0.25s, box-shadow 0.25s;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
 }
 
 .metro-card:hover {
-  border-color: #7A4828 !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.9), 0 0 18px rgba(180, 100, 10, 0.07) !important;
+  border-color: #7a4828 !important;
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.9),
+    0 0 18px rgba(180, 100, 10, 0.07) !important;
 }
 
 /* ─── Torch ──────────────────────────────────────────── */
 @keyframes flicker {
-
   0%,
   100% {
     opacity: 1;
@@ -270,3 +296,118 @@ body {
 .slide-up {
   animation: slideUp 0.45s ease forwards;
 }
+
+/* ─── Crumpled Newspaper Background ─────────────────── */
+.newspaper-bg {
+  position: relative;
+
+  /* Aged dark paper base — noticeably brownish */
+  background-color: #2D2010;
+
+  background-image:
+    /* === SVG feTurbulence: paper crumple/wrinkle bump map === */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.038 0.030' numOctaves='7' seed='14' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23B89050' surfaceScale='4' result='l'%3E%3CfeDistantLight azimuth='50' elevation='58'/%3E%3C/feDiffuseLighting%3E%3CfeBlend in='SourceGraphic' in2='l' mode='multiply'/%3E%3C/filter%3E%3Crect width='700' height='700' fill='%23C0A060' filter='url(%23c)' opacity='0.35'/%3E%3C/svg%3E"),
+
+    /* === Newspaper text column dividers === */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent calc(33% - 1px),
+      rgba(140, 90, 25, 0.65) calc(33% - 1px),
+      rgba(140, 90, 25, 0.65) 33%,
+      transparent 33%,
+      transparent calc(66% - 1px),
+      rgba(140, 90, 25, 0.65) calc(66% - 1px),
+      rgba(140, 90, 25, 0.65) 66%,
+      transparent 66%
+    ),
+
+    /* === Dense text rows (body copy simulation) === */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 9px,
+      rgba(110, 70, 20, 0.72) 9px,
+      rgba(110, 70, 20, 0.72) 10.5px,
+      transparent 10.5px,
+      transparent 12.5px,
+      rgba(100, 62, 18, 0.38) 12.5px,
+      rgba(100, 62, 18, 0.38) 13px
+    ),
+
+    /* === Headline / section break bars === */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 86px,
+      rgba(80, 45, 8, 0.85) 86px,
+      rgba(80, 45, 8, 0.85) 90px,
+      transparent 90px,
+      transparent 97px,
+      rgba(70, 40, 8, 0.50) 97px,
+      rgba(70, 40, 8, 0.50) 98.5px
+    );
+
+  background-size:
+    700px 700px,
+    100% 100%,
+    100% 13px,
+    100% 97px;
+
+  background-repeat: repeat, repeat, repeat, repeat;
+}
+
+
+/* === Fold crease shadows === */
+.newspaper-fold {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(180deg,
+      transparent 45.5%,
+      rgba(0,0,0,0.38) 47.8%,
+      rgba(210,175,100,0.07) 49.0%,
+      rgba(0,0,0,0.28) 50.2%,
+      transparent 52.5%
+    ),
+    linear-gradient(90deg,
+      transparent 37.5%,
+      rgba(0,0,0,0.25) 39.2%,
+      rgba(210,175,100,0.05) 40.0%,
+      rgba(0,0,0,0.18) 40.8%,
+      transparent 42.5%
+    ),
+    linear-gradient(146deg,
+      transparent 62%,
+      rgba(0,0,0,0.22) 64%,
+      rgba(0,0,0,0.05) 64.5%,
+      transparent 66.5%
+    ),
+    linear-gradient(326deg,
+      transparent 56%,
+      rgba(0,0,0,0.18) 58%,
+      transparent 60%
+    ),
+    radial-gradient(ellipse at 2% 2%,   rgba(0,0,0,0.55) 0%, transparent 40%),
+    radial-gradient(ellipse at 98% 98%, rgba(0,0,0,0.50) 0%, transparent 38%),
+    radial-gradient(ellipse at 2% 98%,  rgba(0,0,0,0.42) 0%, transparent 35%),
+    radial-gradient(ellipse at 98% 2%,  rgba(0,0,0,0.42) 0%, transparent 35%);
+}
+
+/* === Vignette to separate site from bg === */
+.newspaper-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(10, 6, 2, 0.10) 0%,
+    rgba(5, 3, 1, 0.65) 52%,
+    rgba(1, 0, 0, 0.94) 100%
+  );
+}
+
+

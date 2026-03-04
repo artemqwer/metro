@@ -52,11 +52,6 @@ function SmartImg({
 }) {
   const [hasError, setHasError] = useState(false);
 
-  // Reset error when src changes (e.g. user adds the file)
-  useEffect(() => {
-    setHasError(false);
-  }, [src]);
-
   if (hasError) {
     return (
       <ImgPlaceholder
@@ -269,16 +264,40 @@ export default function Metro2033Page() {
 
   return (
     <div
+      className="newspaper-bg"
       style={{
+        width: "100vw",
         height: "100vh",
         display: "flex",
-        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         overflow: "hidden",
-        background: "#0A0804",
-        fontFamily: "'PT Serif', serif",
-        color: "#C8B89A",
       }}
     >
+      {/* Fold crease lines */}
+      <div className="newspaper-fold" />
+      {/* Dark vignette so site container stands out */}
+      <div className="newspaper-vignette" />
+
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "1060px",
+          height: "calc(100vh - 36px)",
+          display: "flex",
+          flexDirection: "column",
+          overflow: "hidden",
+          background: "#0A0804",
+          fontFamily: "'PT Serif', serif",
+          color: "#C8B89A",
+          borderLeft: "1px solid #2A1A08",
+          borderRight: "1px solid #2A1A08",
+          boxShadow: "0 0 60px rgba(0,0,0,0.95), -2px 0 20px rgba(0,0,0,0.8), 2px 0 20px rgba(0,0,0,0.8)",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+
 
       {/* ════════════════════════ HEADER ════════════════════════ */}
       <header style={{ flexShrink: 0, position: "relative", zIndex: 30 }}>
@@ -373,6 +392,7 @@ export default function Metro2033Page() {
         */}
         <div className="absolute inset-0">
           <SmartImg
+            key="/hero-bg.png"
             src="/hero-bg.png"
             alt="Фон туннеля метро"
             placeholderLabel="hero-bg.jpg"
@@ -443,6 +463,7 @@ export default function Metro2033Page() {
           }}
         >
           <SmartImg
+            key="/stalker.png"
             src="/stalker.png"
             alt="Сталкер с противогазом"
             placeholderLabel="stalker.png"
@@ -785,6 +806,7 @@ export default function Metro2033Page() {
 
         <span style={{ color: "#B89028", fontSize: 18, textShadow: "0 0 10px rgba(184,144,40,0.45)" }}>✦</span>
       </footer>
+      </div>
     </div>
   );
 }
